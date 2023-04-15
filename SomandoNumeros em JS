@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteParaPessoasEspeciais</title>
+    <style>
+        body{
+            line-height: 45px;
+            text-align: center;
+            font-size: 15pt;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: cadetblue;
+            background-color: azure
+        }
+        input{
+            color: blue;
+            width: 120px;
+            height: 20px;
+        }
+        div#mover{
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <div id="mover">
+        <input type="number" name="num1" id="num1"> +
+        <input type="number" name="num2" id="num2">
+        <input type="button" value="CLICK" onclick="somando()">
+    </div>
+    <div>Resultado</div>
+    <div id="res">Null</div>
+    <script>
+        function somando(){
+            var soma1 = window.document.querySelector('input#num1')
+            var soma2 = window.document.querySelector('input#num2')
+            var res = window.document.querySelector('div#res')
+            var numero1 = Number(soma1.value)
+            var numero2 = Number(soma2.value)
+            var total = numero1 + numero2
+            res.innerHTML = `A soma entre <strong>${numero1}</strong> e <strong>${numero2}</strong> vale: <strong>${total}</strong>`
+        }
+    </script>
+</body>                                 
+</html>
