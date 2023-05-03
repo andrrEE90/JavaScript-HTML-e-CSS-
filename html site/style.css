@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+body{
+    background: linear-gradient(90deg,lightblue,lightslategrey, lightblue);
+}
+header{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(90deg,lightblue,lightslategrey, lightblue);
+}
+h1 > a{
+    text-decoration: none;
+    color: darkcyan;
+    font-weight: bold;
+
+}
+.titulo{
+    font-size: 38px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: kultros;
+}
+.titulo:hover{
+    transform: rotate(1deg);
+    font-size: 40px;
+}
+
+nav{
+    background-color: plum;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px;
+}
+.img1{
+    align-self: flex-end;
+    border-radius: 500px;
+    box-shadow: 0px 0px 20px;
+    margin: 30px;
+    transform: rotate(-20deg);
+    margin-left: 100px;
+}
+.botoes{
+    background-color:plum;
+    color: black;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.botoes:hover{
+    text-decoration: overline;
+}
+
+.meio{
+    background-color:lightslategrey;
+    width: 500px;
+    border-radius: 50px;
+    opacity: 70%;
+    padding: 40px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* section div:first-child {
+    position: absolute;
+}
+section div:last-child {
+    margin: 60px;
+    width: 390px;
+    height: 200px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+} */
+.img1:hover{
+    transform: rotate(-21deg);
+}
+@font-face {
+    font-family: kultros;
+    src: url(Kultros-Regular.ttf);
+}
+.ordem{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+justify-content: center;}
