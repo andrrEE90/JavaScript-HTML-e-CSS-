@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Site</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  
+    <!-- <div class="sidebar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Página 1</a></li>
+            <li><a href="#">Página 2</a></li>
+            <li><a href="#">Página 3</a></li>
+          </ul>
+        </div>
+      </div> -->
+
+      <nav class="menu overlayImage2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Animes</a></li>
+          <li><a href="#">Mangas</a></li>
+          <li><a href="#">Download</a></li>
+          <div class="audiocontrol">
+            <img id="playImage" src="img/song.png" onclick="toggleAudio()">
+              <audio id="Audio">
+                  <source src="audios/SONG.mp3" type="audio/mpeg">
+              </audio>
+              <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" onchange="ajustarVolume()">
+          </div>
+        </ul>
+      </nav>
+
+  <div class="video-container">
+    <video id="Video" volume="0.2">
+      <source src="video/Demon Slayer - Opening(1080p60).mp4" type="video/mp4">
+      Seu navegador não suporta a reprodução de vídeo.
+    </video>
+    <div class="logo-container">
+      <img id="overlayImage" src="img/demon_slayer_logo.png" alt="Imagem Sobreposta">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <img id="playButton" class="button-image" src="img/PLAY.png" alt="Botão de Reprodução">
+    <img id="pauseButton" class="button-image" src="img/PAUSE.png" alt="Botão de Pausa">
+    <img id="stopButton" class="button-image" src="img/STOP.png" alt="Botão de Parar">
+  </div>
+    
+  </div>
+
+  <!-- FAIXA -->
+  <div class="Faixa">
+    <div class="image-banner">
+      <img src="img/Demon_Slayer_2.jpg" alt="Imagem da faixa">
+    </div>
+  </div>
+
+  <div class="conteudo">
+    <div class="texto-da-imagem">
+      <h2>Qual é a história de Demon Slayer?</h2>
+      <p>A história conta sobre um jovem que ganha a vida vendendo carvão até descobrir que sua família foi massacrada por um demônio, restando apenas sua irmã, Nezuko, que foi infectada e está se tornando um monstro. O protagonista, então, decide virar um caçador de demônios e buscar vingança.</p>
+    </div>
+    <div class="conteudo-da-imagem">
+      <img src="img/Demon.png" alt="Imagem">
+    </div>
+  </div>
+
+  <!-- FAIXA -->
+  <div class="Faixa">
+    <div class="image-banner">
+      <img src="img/dojo.jpg" alt="Imagem da faixa">
+    </div>
+  </div>
+
+  <div class="comprar">
+    <h3>PEÇA O SEU MANGAR</h3>
+  </div>
+
+  <div class="carousel">
+    <div class="item">
+      <img src="img/filmes/manga1.jpg" alt="Manga 1">
+    </div>
+    <div class="item">
+      <img src="img/filmes/manga2.jpg" alt="Manga 2">
+    </div>
+    <div class="item">
+      <img src="img/filmes/manga3.jpg" alt="Manga 3">
+    </div>
+    <div class="item">
+      <img src="img/filmes/manga4.jpg" alt="Manga 4">
+    </div>
+    <div class="item">
+      <img src="img/filmes/manga5.jpg" alt="Manga 5">
+    </div>
+    <!-- Adicione mais itens conforme necessário -->
+  </div>
+
+  <div class="form-container">
+    <h3>Formulário de Contato</h3>
+    <form>
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2023 Meu Site | Todos os direitos reservados
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  <!-- AUDIO -->
+
+  <script>
+    var audio = document.getElementById("Audio");
+    var playImage = document.getElementById("playImage");
+    var isPlaying = false;
+    
+
+    function toggleAudio() {
+        if (isPlaying) {
+            audio.pause();
+            playImage.src = "img/PAUSEMUSIC.png";
+        } else {
+            audio.play();
+            playImage.src = "img/song.png";
+        }
+        isPlaying = !isPlaying;
+    }
+    function ajustarVolume() {
+    var volumeSlider = document.getElementById("volumeSlider");
+    var volume = volumeSlider.value;
+    audio.volume = volume;
+}
+</script>
+
+</body>
+</html>
