@@ -1,0 +1,36 @@
+const porta = document.querySelector(".number")
+const button = document.querySelector('.button')
+const corpo = document.querySelector("body")
+
+
+button.addEventListener('click', function() {
+
+    if (porta.value % 2 === 0) {
+        console.log(`O número ${porta.value} é par`)
+        corpo.style.backgroundColor = "red"
+        const h1 = document.createElement('h1')
+        const imagem = document.createElement("img")
+        h1.innerHTML = 'Par'
+        corpo.appendChild(h1)
+        setInterval(function() {
+            imagem.src = "https://www.tvinsider.com/wp-content/uploads/2019/08/the-boys-homelander.jpg"
+            imagem.style.width = "900px"
+            corpo.appendChild(imagem)
+        }, 1000)
+
+        setInterval(function() {
+            imagem.src = "https://th.bing.com/th/id/OIP.JCKKyeHCv7hlsecADKOAhQHaHa?pid=ImgDet&rs=1.jpg"
+            imagem.style.width = "900px"
+            corpo.appendChild(imagem)
+        }, 900)
+
+    }
+    else {
+        console.log(`O numero ${porta.value} é impar`)
+        corpo.style.backgroundColor = "blue"
+        const h1 = document.createElement("h1")
+        h1.innerHTML = 'Impar'
+        corpo.append(h1)
+    }
+
+})
